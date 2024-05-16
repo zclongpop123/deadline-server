@@ -8,12 +8,13 @@ mongo
     ├── data
     └── logs
 ```
-- 添加Deadline用户
-```bash
-use $external
-```
+- 查询Deadline证书的subject
 ```bash
 openssl x509 -in client.pem -subject -nameopt RFC2253 | head -n 1
+```
+- 添加Deadline数据库账户
+```bash
+use $external
 ```
 ```bash
 db.createUser(
