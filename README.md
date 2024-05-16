@@ -17,7 +17,7 @@ db.createUser(
     {
       user: "emailAddress=client@mongo.com,CN=Mongo,OU=Client,O=Mongo,ST=BJ,C=CN",
       roles: [
-         { role: "readWriteAnyDatabase", db: "admin" }
+         { role: "readWrite", db: "deadline10db" }
       ]
     }
 )
