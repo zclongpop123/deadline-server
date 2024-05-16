@@ -8,7 +8,7 @@ mongo
     ├── data
     └── logs
 ```
-- 添加客户端用户
+- 添加Deadline用户
 ```bash
 use $external
 ```
