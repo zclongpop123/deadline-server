@@ -13,6 +13,9 @@ mongo
 use $external
 ```
 ```bash
+openssl x509 -in client.pem -inform PEM -subject -nameopt RFC2253
+```
+```bash
 db.createUser(
     {
       user: "emailAddress=client@mongo.com,CN=Mongo,OU=Client,O=Mongo,ST=BJ,C=CN",
