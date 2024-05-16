@@ -13,7 +13,7 @@ mongo
 use $external
 ```
 ```bash
-openssl x509 -in client.pem -inform PEM -subject -nameopt RFC2253
+openssl x509 -in client.pem -subject -nameopt RFC2253 | head -n 1
 ```
 ```bash
 db.createUser(
