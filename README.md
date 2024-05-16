@@ -8,3 +8,17 @@ mongo
     ├── data
     └── logs
 ```
+- 添加客户端用户
+```bash
+use $external
+```
+```bash
+db.createUser(
+    {
+      user: "emailAddress=client@mongo.com,CN=Mongo,OU=Client,O=Mongo,ST=BJ,C=CN",
+      roles: [
+         { role: "readWriteAnyDatabase", db: "admin" }
+      ]
+    }
+)
+```
