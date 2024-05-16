@@ -38,3 +38,7 @@ openssl x509 -req -in client.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out cl
 ```bash
 cat client.crt client.key > client.pem
 ```
+- 打包pfx证书
+```bash
+openssl pkcs12 -export -inkey client.key -in client.crt -certfile ca.crt -out client.pfx
+```
