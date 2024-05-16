@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+    mongo:
+        container_name: MongoDB
+        user: 999:999
+
+        image: mongo:5.0.22
+        restart: unless-stopped
+        
+        volumes:
+            - type: bind
+              source: /home/mongo/5.0.22
+              target: /home/mongo/5.0.22
+        
+        ports:
+            - '27017:27017'
+
+        command: --config /home/mongo/5.0.22/mongod.conf
